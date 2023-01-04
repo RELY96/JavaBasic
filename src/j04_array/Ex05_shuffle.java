@@ -7,7 +7,7 @@ import java.util.Arrays;
 // => 1) 길이가 10인 배열 정의하고, 0~9로 초기화해라
 // => random 을 이용해서 2) 배열의 임의의 위치에 있는 배열의 값과, 배열의 첫번째 데이터[0]의 값을 교환하는 일을 100번 반복해서 배열을 뒤섞이게 함
 
-public class Ex05_shuffle {
+public class  Ex05_shuffle {
 
 	public static void main(String[] args) {
 		// 1) 배열 정의 & 초기화
