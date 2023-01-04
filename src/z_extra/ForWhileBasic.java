@@ -104,18 +104,46 @@ public class ForWhileBasic {
         //-----------------------------------------------------------------------------------------//
         // *** 반복문 탈출 Continue, Break
         // * continue - continue문 이하 구문 진행X, 다음번째 반복문 실행
-        // * break - 반복문 탈출
+        // * break - 반복문 탈출(해당 반복문)
         // * label - continue, break 이벤트 적용될 반복문 지정, : 표시, 반복문 바로 위 위치
 
+        // ※ 1. 5층 건물, 층마다 7호까지
+        int floor, room;
+        // 1-1. 4층 4호만 출력 막기
+        for (floor = 1; floor <= 5; floor++) {
+            for (room = 1; room <= 7; room++) {
+                if (floor == 4 && room == 4) continue;
+                System.out.printf("[ %d층, %d호 ]", floor, room);
+            }
+            System.out.println("");
+        }
 
+        // 1-2. 4층'은' 3호까지만 출력하기
+        for (floor = 1; floor <= 5; floor++) {
+            for (room = 1; room <= 7; room++) {
+                if (floor == 4 && room == 4) break;
+                System.out.printf("[ %d층, %d호 ]", floor, room);
+            }
+            System.out.println("");
+        }
+        // 1-2) label 사용
+        home:
+        for (floor = 1; floor <= 5; floor++) {
+            for (room = 1; room <= 7; room++) {
+                if (floor == 4 && room == 4) continue home;
+                System.out.printf("[ %d층, %d호 ]", floor, room);
+            }
+            System.out.println("");
+        }
 
-
-        //========================================================================================//
-        // *** 2차원 별찍기
-
-
-
-
-
+        // 1-3. 4층 3호 이후 출력 멈추기
+        home:
+        for (floor = 1; floor <= 5; floor++) {
+            for (room = 1; room <= 7; room++) {
+                if (floor == 4 && room == 4) break home;
+                System.out.printf("[ %d층, %d호 ]", floor, room);
+            }
+            System.out.println("");
+        }
     } //main
 } //class
