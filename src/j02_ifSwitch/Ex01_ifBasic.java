@@ -4,12 +4,12 @@ public class Ex01_ifBasic {
 
 	public static void main(String[] args) {
 		System.out.println("** 삼항식 결과 **");
-		// ** 삼항식 -> if
-		// => a,b 중 큰수 출력하기
+		// ** 삼항식
+		// a,b 중 큰수 출력하기
 		int a=10, b=3;
-//		int max=(a>b) ? a : b;
+//		int max = (a > b) ? a : b;
 		int max;
-		
+
 		//★if문 형식
 		//if(조건문) 실행문 > 모든 조건문은 "관계식"이다(결과는 boolean값)
 		//else 실행문

@@ -21,7 +21,7 @@ public class Ex03_ifRandomGame {
 		
 		// 2) MyNumber 입력받기
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println(" ** 1~ 10까지의 정수를 입력하세요 ");
 		int num=sc.nextInt(); //parseInt도 가능
 		sc.close();

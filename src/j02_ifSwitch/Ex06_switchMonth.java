@@ -2,7 +2,7 @@ package j02_ifSwitch;
 
 import java.util.Scanner;
 
-//ctrl + shift + f => 자동정렬!
+//ctrl + shift + f => 자동정렬! (이클립스)
 
 //** 실습 : 
 //1. 월을 입력 받아서 
@@ -25,53 +25,53 @@ public class Ex06_switchMonth {
 		int month = sc.nextInt();
 		sc.close();
 
-//		int day1 = 31, day2 = 30;
-//		if (month >= 3 && month <= 5) {
-//			switch (month) {
-//			case 4:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
-//				break;
-//			default:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
-//			}
-//			System.out.println("봄 입니다");
-//		} else if (month >= 6 && month <= 8) {
-//			switch (month) {
-//			case 6:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
-//				break;
-//			default:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
-//			}
-//			System.out.println("여름 입니다");
-//		} else if (month >= 9 && month <= 11) {
-//			switch (month) {
-//			case 10:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
-//				break;
-//			default:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
-//			}
-//			System.out.println("가을 입니다");
-//		} else if (month <= 2 || month == 12) {
-//			switch (month) {
-//			case 2:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, 29);
-//				break;
-//			case 11:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
-//				break;
-//			default:
-//				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
-//			}
-//			System.out.println("겨울 입니다");
-//		} else {
-//			System.out.println("오류 입니다");
-//		}
+		int day1 = 31, day2 = 30;
+		if (month >= 3 && month <= 5) {
+			switch (month) {
+			case 4:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
+				break;
+			default:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
+			}
+			System.out.println("봄 입니다");
+		} else if (month >= 6 && month <= 8) {
+			switch (month) {
+			case 6:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
+				break;
+			default:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
+			}
+			System.out.println("여름 입니다");
+		} else if (month >= 9 && month <= 11) {
+			switch (month) {
+			case 10:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
+				break;
+			default:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
+			}
+			System.out.println("가을 입니다");
+		} else if (month <= 2 || month == 12) {
+			switch (month) {
+			case 2:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, 29);
+				break;
+			case 11:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day2);
+				break;
+			default:
+				System.out.printf(" %d월은 %d일 까지이며 ", month, day1);
+			}
+			System.out.println("겨울 입니다");
+		} else {
+			System.out.println("오류 입니다");
+		}
 
 		// ======★switch활용한 간단식!==========//
 		// 여러 case 결과 지정가능(최신버전)
-		String s1, s2;
+/*		String s1, s2;
 		switch (month) {
 		case 1, 3, 5, 7, 8, 10, 12: s1 = "31";
 			break;
@@ -92,7 +92,7 @@ public class Ex06_switchMonth {
 			break;
 		default: s2 = "Error";
 		}
-		System.out.printf("%d월은 %s까지 있고, %s 입니다. \n ", month, s1, s2);
+		System.out.printf("%d월은 %s까지 있고, %s 입니다. \n ", month, s1, s2);*/
 
 	} // main
 
