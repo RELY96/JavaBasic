@@ -1,5 +1,8 @@
 package z_extra;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class ForWhileBasic {
     public static void main(String[] args) {
         // * 반복문 3요소 : 초기값, 조건식, 증감식
@@ -58,27 +61,57 @@ public class ForWhileBasic {
         // 3. 1~100까지 정수 중(for) 3의 배수(if) 합(result) 구하기
         int results2 = 0;
         for (int j = 1; j <= 100; j++) {
-            if (j % 3 == 0) results2+=j;
+            if (j % 3 == 0) results2 += j;
         }
-        System.out.println("3의 배수 합은?"+results2);
+        System.out.println("3의 배수 합은?" + results2);
 
         results2 = 0;
-        for (int j = 3; j<=100;) {
-            results2+=j;
-            j+=3;
+        for (int j = 3; j <= 100; ) {
+            results2 += j;
+            j += 3;
         }
-        System.out.println("3의 배수 합은?"+results2);
+        System.out.println("3의 배수 합은?" + results2);
 
         //========================================================================================//
-        // ※ 1. 랜덤게임(1~10 값 맞출 때 까지 반복)
+        // ※ 1. 랜덤게임(값 맞추기, 1~10범위 벗어나면 재실행)
+        // 1) 1~10 범위 판단
+        Random rn = new Random();
+        int num = rn.nextInt(10) + 1;
+        Scanner sc = new Scanner(System.in);
+        int input;
+
+        do {
+            System.out.println("1~10까지 정수 입력");
+            input = sc.nextInt();
+        } while (input < 1 || input > 10);
+
+        // 2) (범위 시) 결과처리
+        int abs = Math.abs(num - input);
+        System.out.printf("출력값: %d, 입력값: %d \n", num, input);
+        switch (abs) {
+            case 0:
+                System.out.println("금메달");
+                break;
+            case 1:
+                System.out.println("은메달");
+                break;
+            case 2:
+                System.out.println("동메달");
+                break;
+            default:
+                System.out.println("꽝");
+        }
+        //-----------------------------------------------------------------------------------------//
+        // *** 반복문 탈출 Continue, Break
+        // * continue - continue문 이하 구문 진행X, 다음번째 반복문 실행
+        // * break - 반복문 탈출
+        // * label - continue, break 이벤트 적용될 반복문 지정, : 표시, 반복문 바로 위 위치
 
 
 
 
-
-
-        //----------------------------------------------------------------------------------------//
-        // ※ 2. 랜덤게임2(1~100 값 맞출 때 까지 힌트주며 반복)
+        //========================================================================================//
+        // *** 2차원 별찍기
 
 
 
